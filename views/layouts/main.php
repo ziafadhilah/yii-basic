@@ -33,7 +33,7 @@ AppAsset::register($this);
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-expand-lg navbar-light bg-light',
+            'class' => 'navbar-expand-lg navbar fixed-top navbar-light bg-light',
         ],
     ]);
     echo Nav::widget([
@@ -59,13 +59,13 @@ AppAsset::register($this);
     NavBar::end();
     ?>
 
-    <div class="container">
+    <!-- <div class="container"> -->
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
         <?= $content ?>
-    </div>
+    <!-- </div> -->
 </div>
 
 <footer class="footer">

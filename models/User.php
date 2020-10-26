@@ -3,7 +3,6 @@
 namespace app\models;
 
 use Yii;
-use yii\base\NotSupportedException;
 
 /**
  * This is the model class for table "admin".
@@ -31,6 +30,8 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     {
         return [
             [['username', 'password', 'email', 'alamat'], 'string', 'max' => 255],
+            [['username', 'password'], 'required'],
+            [['id_user_role'], 'integer'],
             [['auth_key'], 'string', 'max' => 50],
             [['no_hp'], 'string', 'max' => 15],
         ];
@@ -49,6 +50,7 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
             'authKey' => 'Auth Key',
             'alamat' => 'Alamat',
             'no_hp' => 'Nomor Handphone',
+            'id_user_role' => 'User Role',
         ];
     }
 
@@ -86,6 +88,35 @@ class User extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
     {
         return $this->password === $password;
     }
+
+    public function getRole()
+    {
+        if ($this->id_user_role === UserRole::ADMIN) {
+            return 'Admin';
+        }
+
+        if ($this->id_user_role === UserRole::USER) {
+            return 'User';
+        }
+    }
+
+    public static function isAdmin()
+    {
+        if (Yii::$app->user->identity->id_user_role == UserRole::ADMIN) {
+            return true;
+        } else {
+            return false;
+        }
+    } 
+
+    public static function isUser()
+    {
+        if (Yii::$app->user->identity->id_user_role == UserRole::USER) {
+            return true;
+        } else {
+            return false;
+        }
+    } 
 }
 
 // ini users lama
