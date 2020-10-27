@@ -55,55 +55,56 @@ $this->title = 'My Yii Application';
       <span class="sr-only">Next</span>
     </a>
 </div>
-<br>
-<div class="tab">
-  <!-- Nav tabs -->
-  <ul class="nav nav-tabs nav-justified" role="tablist">
-    <li class="nav-item">
-      <a class="nav-link active" data-toggle="tab" href="#ko">Kayu Olahan</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#dk">Deking</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#ks">Kusen</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#pt">Pintu</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#lp">Lis Profil</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" data-toggle="tab" href="#tg">Tangga</a>
-    </li>
-  </ul>
+<div class="container">
+  <div class="tab">
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs nav-justified" role="tablist">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#ko">Kayu Olahan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#dk">Deking</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#ks">Kusen</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#pt">Pintu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#lp">Lis Profil</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#tg">Tangga</a>
+      </li>
+    </ul>
 
-  <!-- Tab panes -->
-  <div class="tab-content">
-    <div id="ko" class="container tab-pane active"><br>
-      <h3>Kayu Olahan</h3>
-      <p>Lorem.</p>
-    </div>
-    <div id="dk" class="container tab-pane fade"><br>
-      <h3>Deking</h3>
-      <p>Lorem, ipsum.</p>
-    </div>
-    <div id="ks" class="container tab-pane fade"><br>
-      <h3>Kusen</h3>
-      <p>Lorem, ipsum dolor.</p>
-    </div>
-    <div id="pt" class="container tab-pane fade"><br>
-      <h3>Kusen</h3>
-      <p>Lorem ipsum dolor sit.</p>
-    </div>
-    <div id="lp" class="container tab-pane fade"><br>
-      <h3>Kusen</h3>
-      <p>Lorem ipsum dolor sit amet.</p>
-    </div>
-    <div id="tg" class="container tab-pane fade"><br>
-      <h3>Kusen</h3>
-      <p>Lorem ipsum dolor sit amet consectetur.</p>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div id="ko" class="container tab-pane active"><br>
+        <h3>Kayu Olahan</h3>
+        <p>Lorem.</p>
+      </div>
+      <div id="dk" class="container tab-pane fade"><br>
+        <h3>Deking</h3>
+        <p>Lorem, ipsum.</p>
+      </div>
+      <div id="ks" class="container tab-pane fade"><br>
+        <h3>Kusen</h3>
+        <p>Lorem, ipsum dolor.</p>
+      </div>
+      <div id="pt" class="container tab-pane fade"><br>
+        <h3>Kusen</h3>
+        <p>Lorem ipsum dolor sit.</p>
+      </div>
+      <div id="lp" class="container tab-pane fade"><br>
+        <h3>Kusen</h3>
+        <p>Lorem ipsum dolor sit amet.</p>
+      </div>
+      <div id="tg" class="container tab-pane fade"><br>
+        <h3>Kusen</h3>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
     </div>
   </div>
 </div>

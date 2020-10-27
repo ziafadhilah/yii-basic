@@ -26,14 +26,43 @@ AppAsset::register($this);
 </head>
 <body>
 <?php $this->beginBody() ?>
-
+<!-- <div class="container">
+    <div class="d-flex">
+        <div class="mr-auto p-2 dropdown">
+            <ul class="bar-links">
+            <?php if (isset($_SESSION['logged_in']) and $_SESSION['role'] =='user') { ?>
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" style="background-color: transparent;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span><i class="fa fa-user"></i> Akun Saya</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <label style="text-align: center;" class="dropdown-item" href="#">Halo, Selamat Datang.</label>
+                  <hr>
+                  <span style="margin-left: 20px"><a onclick="return confirm('Apakah anda yakin ingin keluar ?')" href="<?= Yii::getAlias('@web/site/index') ?>"><i class="fa fa-sign-out"></i>&nbsp Keluar</a></span>
+                </div>
+              </div>
+            <?php }else{ ?>
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" style="background-color: transparent;" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <span><i class="fa fa-user"></i> Masuk / Daftar</span>
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" href="<?= Yii::getAlias('@web/index.php?r=site/login')?>">Masuk</a>
+                  <a class="dropdown-item" href="<?= Yii::getAlias('@web/site/sign-up')?>">Daftar</a>
+                </div>
+              </div>
+            <?php } ?>
+            </ul>
+        </div>
+    </div>
+</div> -->
 <div class="wrap">
     <?php
     NavBar::begin([
         'brandLabel' => Yii::$app->name,
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'navbar-expand-lg navbar fixed-top navbar-light bg-light',
+            'class' => 'navbar sticky-top navbar-expand-lg navbar-light bg-light',
         ],
     ]);
     echo Nav::widget([
@@ -42,8 +71,9 @@ AppAsset::register($this);
             ['label' => 'Home', 'url' => ['/site/index']],
             ['label' => 'About', 'url' => ['/site/about']],
             ['label' => 'Contact', 'url' => ['/site/contact']],
+            ['label' => 'Gudang Kami', 'url' => ['site/gudang']],
             Yii::$app->user->isGuest ? (
-                ['label' => 'Login', 'url' => ['/site/login']]
+                ['label' => 'Login / Daftar', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
@@ -70,9 +100,9 @@ AppAsset::register($this);
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+        <p class="pull-left">&copy; <?= date('Y') ?> KayuOnline v2.0 - All Right Reserved!</p>
 
-        <p class="pull-right"><?= Yii::powered() ?></p>
+        <!-- <p class="ml-auto"><?= Yii::powered() ?></p> -->
     </div>
 </footer>
 
